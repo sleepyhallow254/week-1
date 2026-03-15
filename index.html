@@ -1,262 +1,285 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Joe | Developer Portfolio</title>
-<link rel="stylesheet" href="style.css">
-<style>
-/* General Styles */
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#0f172a;
-  color:white;
-  transition:0.3s;
-}
-html{
-  scroll-behavior:smooth;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joe | Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      transition: 0.3s;
+    }
 
-/* Header and Navbar */
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 20px;
-  background:#020617;
-}
-.navbar{
-  display:flex;
-  gap:20px;
-}
-.nav-link{
-  text-decoration:none;
-  color:white;
-  font-weight:bold;
-  position:relative;
-  padding:5px 0;
-}
-.nav-link::after{
-  content:"";
-  position:absolute;
-  width:0%;
-  height:2px;
-  left:0;
-  bottom:-5px;
-  background:#3b82f6;
-  transition:0.3s;
-}
-.nav-link:hover::after{
-  width:100%;
-}
-.nav-link.active{
-  color:#3b82f6;
-}
-.nav-link.active::after{
-  width:100%;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* Dark/Light Mode Button */
-#modeToggle{
-  background:none;
-  border:none;
-  color:white;
-  font-size:20px;
-  cursor:pointer;
-}
+    /* Header and Navbar */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #020617;
+    }
 
-/* Hero Section */
-#home{
-  text-align:center;
-  padding:100px 20px;
-}
-.profile-pic{
-  width:150px;
-  height:150px;
-  border-radius:50%;
-  object-fit:cover;
-  border:4px solid #3b82f6;
-  margin-bottom:20px;
-}
-button{
-  padding:10px 20px;
-  background:#3b82f6;
-  border:none;
-  color:white;
-  cursor:pointer;
-  border-radius:6px;
-}
-button:hover{
-  background:#2563eb;
-}
+    .navbar {
+      display: flex;
+      gap: 20px;
+    }
 
-/* Sections */
-section{
-  padding:60px 20px;
-  text-align:center;
-}
+    .nav-link {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      position: relative;
+      padding: 5px 0;
+    }
 
-/* Skills */
-.skills-container{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-}
-.skill{
-  background:#1e293b;
-  padding:10px 20px;
-  border-radius:6px;
-}
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: -5px;
+      background: #3b82f6;
+      transition: 0.3s;
+    }
 
-/* Projects */
-.project{
-  background:#1e293b;
-  padding:20px;
-  margin:auto;
-  max-width:400px;
-  border-radius:8px;
-  margin-top:20px;
-}
-.project a{
-  display:inline-block;
-  margin:10px;
-  color:#3b82f6;
-  text-decoration:none;
-}
+    .nav-link:hover::after {
+      width: 100%;
+    }
 
-/* Footer */
-footer{
-  text-align:center;
-  padding:20px;
-  background:#020617;
-}
+    .nav-link.active {
+      color: #3b82f6;
+    }
 
-/* Light Mode */
-.light-mode{
-  background:white;
-  color:black;
-}
-.light-mode header{
-  background:#f1f5f9;
-}
-.light-mode .project{
-  background:#e2e8f0;
-}
-.light-mode .skill{
-  background:#e2e8f0;
-}
-.light-mode nav a{
-  color:black;
-}
+    .nav-link.active::after {
+      width: 100%;
+    }
 
-/* Responsive */
-@media (max-width:768px){
-  header{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-  .navbar{
-    flex-direction:column;
-    gap:10px;
-  }
-  .skills-container{
-    flex-direction:column;
-    align-items:center;
-  }
-}
-</style>
+    /* Dark/Light Mode Button */
+    #modeToggle {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    #home {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #3b82f6;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #3b82f6;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    /* Skills */
+    .skills-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .skill {
+      background: #1e293b;
+      padding: 10px 20px;
+      border-radius: 6px;
+    }
+
+    /* Projects */
+    .project {
+      background: #1e293b;
+      padding: 20px;
+      margin: auto;
+      max-width: 400px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .project a {
+      display: inline-block;
+      margin: 10px;
+      color: #3b82f6;
+      text-decoration: none;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 10px 20px;
+      /* smaller padding */
+      background: #020617;
+      font-size: 0.85rem;
+      /* smaller font size */
+    }
+
+    /* Light Mode */
+    .light-mode {
+      background: white;
+      color: black;
+    }
+
+    .light-mode header {
+      background: #f1f5f9;
+    }
+
+    .light-mode .project {
+      background: #e2e8f0;
+    }
+
+    .light-mode .skill {
+      background: #e2e8f0;
+    }
+
+    .light-mode nav a {
+      color: black;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .skills-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <header>
+    <h1>Joe</h1>
+    <nav class="navbar">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <button id="modeToggle">🌙</button>
+  </header>
 
-<header>
-  <h1>Joe</h1>
-  <nav class="navbar">
-    <a href="#home" class="nav-link active">Home</a>
-    <a href="#about" class="nav-link">About</a>
-    <a href="#skills" class="nav-link">Skills</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#contact" class="nav-link">Contact</a>
-  </nav>
-  <button id="modeToggle">🌙</button>
-</header>
+  <section id="home">
+    <img src="images/profile.jpg" class="profile-pic" alt="Joe Profile" />
+    <h2>Hello, I'm Joe</h2>
+    <p>Passionate about coding, computers and building software.</p>
+  </section>
 
-<section id="home">
-  <img src="images/profile.jpg" class="profile-pic" alt="Joe Profile">
-  <h2>Hello, I'm Joe</h2>
-  <p>Passionate about coding, computers and building software.</p>
-</section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I enjoy working with computers and building software projects. My goal
+      is to become a professional developer.
+    </p>
+  </section>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I enjoy working with computers and building software projects.
-    My goal is to become a professional developer.
-  </p>
-</section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">GitHub</div>
+      <div class="skill">VS Code</div>
+    </div>
+  </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills-container">
-    <div class="skill">HTML</div>
-    <div class="skill">CSS</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">GitHub</div>
-    <div class="skill">VS Code</div>
-  </div>
-</section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>A personal website built using HTML, CSS and JavaScript.</p>
+      <a href="#">Live Demo</a>
+      <a href="#">GitHub</a>
+    </div>
+  </section>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="project">
-    <h3>Portfolio Website</h3>
-    <p>A personal website built using HTML, CSS and JavaScript.</p>
-    <a href="#">Live Demo</a>
-    <a href="#">GitHub</a>
-  </div>
-</section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: mr.cautious17b.com</p>
+    <p>
+      GitHub:https://sleepyhallow254.github.io/iyf-s10-week-01-sleepyhallow254/
+    </p>
+  </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-  <p>GitHub: github.com/yourusername</p>
-</section>
+  <footer>
+    <p>© 2026 Joe | Developer Portfolio</p>
+  </footer>
 
-<footer>
-  <p>© 2026 Joe | Developer Portfolio</p>
-</footer>
+  <script>
+    /* Smooth scrolling active link highlight */
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
 
-<script>
-/* Smooth scrolling active link highlight */
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-link");
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 80;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
 
-window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 80;
-    if(pageYOffset >= sectionTop){
-      current = section.getAttribute("id");
-    }
-  });
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if(link.getAttribute("href") === "#" + current){
-      link.classList.add("active");
-    }
-  });
-});
-
-/* Dark/Light mode toggle */
-const modeToggle = document.getElementById("modeToggle");
-modeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("light-mode");
-});
-</script>
-
+    /* Dark/Light mode toggle */
+    const modeToggle = document.getElementById("modeToggle");
+    modeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+    });
+  </script>
 </body>
+
 </html>
